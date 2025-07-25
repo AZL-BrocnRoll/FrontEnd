@@ -30,7 +30,7 @@ async function loadFoodData() {
           <p class="text-sm text-gray-700 mb-1">Calorie: ${item.nutritioninfo.calories}</p>
           <p class="text-sm text-gray-700 mb-1">Carb: ${item.nutritioninfo.carbs}</p>
           <p class="text-sm text-gray-700 mb-1">Fat: ${item.nutritioninfo.fats}</p>
-          <p class="text-sm text-gray-700 mb-1">Protein: ${item.nutritioninfo.protetins}</p>
+          <p class="text-sm text-gray-700 mb-1">Protein: ${item.nutritioninfo.proteins}</p>
           <p class="text-sm text-gray-700 mb-1"><strong>Dietary:</strong> ${item.dietaryrestriction}</p>     
         ` : `
           <p class="text-sm text-gray-500 italic mb-1">Login to view nutrition and dietary info.</p>
