@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Health Self-Assessment Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #2e7d32;
+    }
+
+    .question {
+      margin: 20px 0;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin-top: 20px;
+      background-color: #2e7d32;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    #result {
+      margin-top: 30px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>🌿 Health Self-Assessment Quiz</h2>
+  <form id="quizForm">
+    <div class="question">
+      1. Do you eat at least 2 servings of fruits and 3 servings of vegetables daily?<br>
+      <label><input type="radio" name="q1" value="yes"> Yes</label>
+      <label><input type="radio" name="q1" value="no"> No</label>
+    </div>
+
+    <div class="question">
+      2. Do you limit fast food and sugary snacks to once or twice a week?<br>
+      <label><input type="radio" name="q2" value="yes"> Yes</label>
+      <label><input type="radio" name="q2" value="no"> No</label>
+    </div>
+
+    <div class="question">
+      3. Do you drink at least 6–8 glasses of water daily?<br>
+      <label><input type="radio" name="q3" value="yes"> Yes</label>
+      <label><input type="radio" name="q3" value="no"> No</label>
+    </div>
+
+    <div class="question">
+      4. Do you exercise at least 150 minutes per week?<br>
+      <label><input type="radio" name="q4" value="yes"> Yes</label>
+      <label><input type="radio" name="q4" value="no"> No</label>
+    </div>
+
+    <div class="question">
+      5. Do you avoid sitting too long without stretching?<br>
+      <label><input type="radio" name="q5" value="yes"> Yes</label>
+      <label><input type="radio" name="q5" value="no"> No</label>
+    </div>
+
+    <div class="question">
+      6. Do you sleep 7–9 hours a night and feel rested?<br>
+      <label><input type="radio" name="q6" value="yes"> Yes</label>
+      <label><input type="radio" name="q6" value="no"> No</label>
+    </div>
+
+    <div class="question">
+      7. Do you feel your stress is under control?<br>
+      <label><input type="radio" name="q7" value="yes"> Yes</label>
+      <label><input type="radio" name="q7" value="no"> No</label>
+    </div>
+
+    <div class="question">
+      8. Do you use healthy ways to manage stress?<br>
+      <label><input type="radio" name="q8" value="yes"> Yes</label>
+      <label><input type="radio" name="q8" value="no"> No</label>
+    </div>
+
+    <div class="question">
+      9. Do you avoid smoking and limit alcohol to healthy levels?<br>
+      <label><input type="radio" name="q9" value="yes"> Yes</label>
+      <label><input type="radio" name="q9" value="no"> No</label>
+    </div>
+
+    <div class="question">
+      10. Do you limit screen time, especially before bed?<br>
+      <label><input type="radio" name="q10" value="yes"> Yes</label>
+      <label><input type="radio" name="q10" value="no"> No</label>
+    </div>
+
+    <div class="question">
+      11. Do you go for routine medical or dental checkups yearly?<br>
+      <label><input type="radio" name="q11" value="yes"> Yes</label>
+      <label><input type="radio" name="q11" value="no"> No</label>
+    </div>
+
+    <div class="question">
+      12. Do you take time regularly for self-care activities (e.g. hobbies, relaxation, reflection)?<br>
+      <label><input type="radio" name="q12" value="yes"> Yes</label>
+      <label><input type="radio" name="q12" value="no"> No</label>
+    </div>
+
+    <button type="button" onclick="calculateResult()">Submit</button>
+  </form>
+
+  <div id="result"></div>
+
+  <script>
+    function calculateResult() {
+      let yesCount = 0;
+      for (let i = 1; i <= 12; i++) {
+        const answer = document.querySelector(`input[name="q${i}"]:checked`);
+        if (answer && answer.value === 'yes') {
+          yesCount++;
+        }
+      }
+
+      const resultDiv = document.getElementById("result");
+      if (yesCount >= 10) {
+        resultDiv.innerHTML = `✅ Score: ${yesCount}/12<br><strong>You’re on track with a healthy lifestyle! Keep it up! 🌟</strong>`;
+      } else if (yesCount >= 7) {
+        resultDiv.innerHTML = `🟡 Score: ${yesCount}/12<br><strong>You’re doing okay, but there's room to improve. Maybe you can check with us 💪</strong>`;
+      } else if (yesCount >= 4) {
+        resultDiv.innerHTML = `🔴 Score: ${yesCount}/12<br><strong>You may be at moderate risk. Review your habits and consider small changes. Do approach us if you are unsure 🚧</strong>`;
+      } else {
+        resultDiv.innerHTML = `⚠️ Score: ${yesCount}/12<br><strong>Your current habits may be affecting your health. It's a good idea to seek professional advice from us 🩺</strong>`;
+      }
+    }
+  </script>
+
+  <button onclick="window.location.href='home.html'"
+    class="mt-6 bg-gray-800 text-white px-4 py-2 rounded-full text-sm hover:bg-gray-700">
+    ← Return to Home
+  </button>
+</body>
+  <script>
+    // Clear local storage
+    localStorage.clear();
+  </script>
+
+</html>

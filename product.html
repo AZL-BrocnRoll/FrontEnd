@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Products | Broc & Roll</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="main.js"></script>
+</head>
+
+<body class="bg-[#F8F8F6] text-[#1A1A1A] font-sans">
+
+  <!-- Navbar -->
+  <header class="flex justify-between items-center px-6 py-4 bg-white shadow-md">
+    <div class="text-2xl font-bold">Broc & Roll</div>
+    <nav class="space-x-6 text-sm">
+      <a href="home.html" class="hover:underline">Home</a>
+      <a href="product.html" class="hover:underline">Products</a>
+      <a href="contact.html" class="hover:underline">Contact</a>
+    </nav>
+    <div class="flex space-x-2">
+      <div id="Login" class="bg-black text-white px-4 py-2 rounded-full text-sm text-center cursor-pointer">Login</div>
+      <div id="Register" class="bg-black text-white px-4 py-2 rounded-full text-sm text-center cursor-pointer">Register
+      </div>
+    </div>
+  </header>
+
+  <!-- Register -->
+  <form id="RegisterForm"
+    class="flex flex-col items-center justify-center text-center min-h-screen bg-cover bg-center fixed top-0 left-0 w-full hidden">
+    <div id="signUpForm" class="flex flex-col p-6 space-y-4 bg-gradient-to-bl from-gray-100 to-gray-300 relative">
+      <div id="closeUpForm" class="absolute top-2 right-4 text-black text-2xl font-bold cursor-pointer">&times;</div>
+      <h1 class="text-2xl font-bold">Register for an account</h1>
+
+      <!-- Username -->
+      <div class="flex items-center mb-4">
+        <label for="rname" class="w-24">Username</label>
+        <input id="rname" type="text" placeholder="Enter username"
+          class="flex-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" />
+      </div>
+
+      <!-- Password -->
+      <div class="flex items-center mb-6">
+        <label for="rpassword" class="w-24">Password</label>
+        <input id="rpassword" type="password" placeholder="Enter password"
+          class="flex-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" />
+      </div>
+
+      <!-- Confirm Password -->
+      <div class="flex items-center mb-6">
+        <label for="rcpassword" class="w-24">Confirm Password</label>
+        <input id="rcpassword" type="password" placeholder="Re-enter password"
+          class="flex-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" />
+      </div>
+
+      <!-- Gender -->
+      <div>
+        <label for="rgender" class="block mb-1 font-medium">Gender</label>
+        <select id="rgender" name="gender"
+          class="border border-gray-300 rounded p-2 text-xs focus:outline-none focus:ring-2 focus:ring-blue-400">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+
+      <!-- Age -->
+      <div>
+        <label for="rage" class="block mb-1 font-medium">Age</label>
+        <select id="rage" name="age"
+          class="border border-gray-300 rounded p-2 text-xs focus:outline-none focus:ring-2 focus:ring-blue-400">
+          <option value="Below 20">Below 20</option>
+          <option value="20 - 29">20 to 29</option>
+          <option value="30 - 39">30 to 39</option>
+          <option value="40 - 49">40 to 49</option>
+          <option value="50 and above">50 and above</option>
+        </select>
+      </div>
+
+      <!-- Weight -->
+      <div class="flex items-center mb-6">
+        <label for="rweight" class="w-24">Weight</label>
+        <input id="rweight" type="text" placeholder="Enter your weight in kg"
+          class="flex-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" />
+      </div>
+
+      <!-- Height -->
+      <div class="flex items-center mb-6">
+        <label for="rheight" class="w-24">Height</label>
+        <input id="rheight" type="text" placeholder="Enter your height in m"
+          class="flex-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" />
+      </div>
+
+      <!-- Register Button -->
+      <button id="bRegister"
+        class="w-full bg-red-900 text-white py-2 rounded-lg hover:bg-red-600 transition">Register</button>
+
+      <!-- Reroute -->
+
+      <!-- Divider 2-->
+      <div class="flex items-center mb-4">
+        <hr class="flex-grow border-gray-300" />
+      </div>
+
+      <p class="text-sm font-light text-gray-500 dark:text-gray-400">
+        Already have an account?
+      <div id="showLoginFromRegister"
+        class="font-medium text-primary-600 hover:underline dark:text-primary-500 cursor-pointer">Login
+        here</div>
+      </p>
+      <p class="text-sm text-gray-500 mb-2">© 2025 Broc & Roll. All rights reserved.</p>
+      <p class="text-sm text-gray-500 mb-2">(This app was developed for educational purpose only)</p>
+    </div>
+  </form>
+
+  <!-- Login -->
+  <form id="LoginForm"
+    class="flex flex-col items-center justify-center text-center min-h-screen bg-cover bg-center fixed top-0 left-0 w-full hidden">
+    <div id="signInForm" class="flex flex-col p-6 space-y-4 bg-gradient-to-bl from-gray-100 to-gray-300 relative">
+      <div id="closeInForm" class="absolute top-2 right-4 text-black text-2xl font-bold cursor-pointer">&times;</div>
+      <h1 class="text-2xl font-bold">Login to Account</h1>
+
+      <!-- Username -->
+      <div class="flex items-center mb-4">
+        <label for="sname" class="w-24">Username</label>
+        <input id="sname" type="text" placeholder="Enter username"
+          class="flex-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" />
+      </div>
+
+      <!-- Password -->
+      <div class="flex items-center mb-6">
+        <label for="spassword" class="w-24">Password</label>
+        <input id="spassword" type="password" placeholder="Enter password"
+          class="flex-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" />
+      </div>
+
+      <!-- Login Button -->
+      <button id="bLogin"
+        class="w-full bg-red-900 text-white py-2 rounded-lg hover:bg-red-600 transition">Login</button>
+
+      <!-- Reroute -->
+
+      <!-- Divider 2-->
+      <div class="flex items-center mb-4">
+        <hr class="flex-grow border-gray-300" />
+      </div>
+
+      <p class="text-sm font-light text-gray-500 dark:text-gray-400">
+        Do not have an account?
+      <div id="showRegisterFromLogin"
+        class="font-medium text-primary-600 hover:underline dark:text-primary-500 cursor-pointer">Sign
+        here</div>
+      </p>
+      <p class="text-sm text-gray-500 mb-2">© 2025 Broc & Roll. All rights reserved.</p>
+      <p class="text-sm text-gray-500 mb-2">(This app was developed for educational purpose only)</p>
+    </div>
+  </form>
+
+  <section class="px-6 py-16 bg-[#E3EDE4] text-center">
+    <h2 class="text-3xl font-semibold mb-6">Healthy Food Products</h2>
+    <div id="foodList" class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#1A1A1A] text-white px-6 py-12">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+      <div>
+        <h3 class="font-semibold mb-2">Broc & Roll</h3>
+        <p>Simple, personalized wellness delivered to you.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-2">Quick Links</h3>
+        <ul class="space-y-1">
+          <li><a href="product.html" class="hover:underline">Products</a></li>
+          <li><a href="quiz.html" class="hover:underline">Quiz</a></li>
+          <li><a href="faq.html" class="hover:underline">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-2">Contact</h3>
+        <p>support@brocnroll.com</p>
+      </div>
+    </div>
+    <div class="text-center mt-8 text-xs text-gray-400">© 2025 Broc & Roll. All rights reserved.</div>
+  </footer>
+</body>
+
+</html>

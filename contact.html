@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Broc & Roll</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="contact.js"></script>
+</head>
+
+<body class="bg-[#F8F8F6] text-[#1A1A1A] font-sans">
+  <header class="flex justify-between items-center px-6 py-4 bg-white shadow-md">
+    <div class="text-2xl font-bold">Broc & Roll</div>
+    <nav class="space-x-6 text-sm">
+      <a href="home.html" class="hover:underline">Home</a>
+      <a href="product.html" class="hover:underline">Products</a>
+      <a href="contact.html" class="hover:underline">Contact</a>
+    </nav>
+    <div class="flex space-x-2">
+    </div>
+
+  </header>
+  <section class="max-w-3xl mx-auto px-4 mt-10 mb-10">
+    <h2 class="text-3xl font-bold mb-5">Contact Us</h2>
+    <form id="contact-form" class="space-y-5 bg-white p-6 shadow rounded-lg">
+      <div>
+        <label for="name" class="block text-sm font-medium mb-1">Name</label>
+        <input type="text" id="name" name="name" required
+          class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring focus:border-blue-500">
+      </div>
+
+      <div>
+        <label for="email" class="block text-sm font-medium mb-1">Email</label>
+        <input type="email" id="email" name="email" required
+          class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring focus:border-blue-500">
+      </div>
+
+      <div>
+        <label for="message" class="block text-sm font-medium mb-1">Message</label>
+        <textarea id="message" name="message" rows="5" required
+          class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring focus:border-blue-500"></textarea>
+      </div>
+
+      <button type="submit"
+        class="w-full bg-red-500 text-white font-semibold py-2 rounded hover:bg-red-600 transition">Send
+        Message</button>
+
+      <p id="form-status" class="text-sm text-center mt-3"></p>
+    </form>
+  </section>
+
+  <!-- Popup modal -->
+  <div id="popup" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center mt-[-25%] hidden z-50">
+    <div class="bg-white rounded-lg p-6 max-w-sm w-full shadow-lg text-center relative">
+      <button id="popup-close"
+        class="absolute top-2 right-3 text-xl font-bold text-gray-600 hover:text-gray-900 cursor-pointer">&times;</button>
+      <p id="popup-message" class="text-lg"></p>
+      <button id="popup-ok" class="mt-4 px-6 py-2 bg-red-500 text-white rounded hover:bg-red-600 transition">OK</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-[#1A1A1A] text-white px-6 py-12">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+      <div>
+        <h3 class="font-semibold mb-2">Broc & Roll</h3>
+        <p>Simple, personalized wellness delivered to you.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-2">Quick Links</h3>
+        <ul class="space-y-1">
+          <li><a href="product.html" class="hover:underline">Products</a></li>
+          <li><a href="quiz.html" class="hover:underline">Quiz</a></li>
+          <li><a href="faq.html" class="hover:underline">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-2">Contact</h3>
+        <p>support@brocnroll.com</p>
+      </div>
+    </div>
+    <div class="text-center mt-8 text-xs text-gray-400">© 2025 Broc & Roll. All rights reserved.</div>
+  </footer>
+</body>
+
+</html>
