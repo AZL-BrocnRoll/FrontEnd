@@ -7,7 +7,7 @@ async function loadFoodData() {
 
     const data = await response.json();
     const suitableItems = data.foods.filter(item => item.suitableforelderly === true);
-    console.log(`suitableItems: ${suitableItems[0]}`);
+
 
     const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
     const container = document.getElementById('foodList');
@@ -19,6 +19,7 @@ async function loadFoodData() {
     }
 
     suitableItems.forEach(item => {
+      console.log(`Protein: ${item.nutritioninfo.proteins}`);
       const card = document.createElement('div');
       card.className = 'bg-white p-4 rounded shadow text-left';
 
